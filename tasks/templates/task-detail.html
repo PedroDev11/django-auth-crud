@@ -1,0 +1,28 @@
+{% extends 'navbar.html' %} {% block content %}
+<main class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 mt-5">
+            <h1 class="text-secondary">{{task.title}}</h1>
+            {{ error }}
+
+            <div>
+                <form method="POST" class="card card-body">
+                    {% csrf_token %} {{ form.as_p }}
+                    <button class="btn btn-success">Update task</button>
+                </form>
+
+                <form action="{% url 'complete-task' task.id %}" method="POST" class="card card-body">
+                    {% csrf_token %}
+                    <button class="btn btn-primary">Complete</button>
+                </form>
+
+                <form action="{% url 'delete-task' task.id %}" method="POST" class="card card-body">
+                    {% csrf_token %}
+                    <button class="btn btn-danger">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

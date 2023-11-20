@@ -1,0 +1,19 @@
+{% extends 'navbar.html' %} {% block content %}
+
+<main class="container py-5">
+    <section class="card card-body">
+        <h1 class="display-1 text-center">Django App</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quos suscipit porro voluptates, illum quod ut labore voluptate esse quibusdam quo quas repellat tempore placeat accusamus perferendis nam facere provident animi! Provident corrupti
+            quam cupiditate totam, fugiat, odio alias labore, aspernatur quae accusamus assumenda nesciunt commodi quidem ad aperiam? Sint animi nostrum fugiat laborum repellat dicta iure molestiae, iusto laboriosam corporis accusantium quo magni soluta.
+            Autem blanditiis facilis est quibusdam dicta natus voluptatibus quaerat exercitationem molestias dolorum laborum molestiae ex at minima optio deserunt, quo perferendis magnam! Tempora similique voluptas cumque quia aliquam, dolorem quos aliquid
+            perspiciatis dolorum, culpa voluptates?</p>
+        <div class="text-center">
+            <a class="btn btn-success" href="{% url 'signin' %}">Sign in</a>
+            <a class="btn btn-dark" href="{% url 'signup' %}">Sign up</a>
+        </div>
+
+
+    </section>
+</main>
+
+{% endblock %}
